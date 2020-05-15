@@ -1,0 +1,39 @@
+To Install:
+Simply upload the files into their correct directories. Go to your admin area and enable the module. 
+If you dont have a Webcash Merchant account you will need to sign up for one. (Call 0383188977)
+
+1. Copy the epayment directory to the working directory of your oscommerce folder. For example, if your oscommerce directory is under http://www.mydomain.com/osc, then copy the epayment directory into there.
+
+2. The includes directory contains two files in two different directories.
+a. Copy includes\languages\english\modules\payment\webcash.php into your oscommerce's includes\languages\english\modules\payment directory
+b. Copy includes\modules\payment\webcash.php into your oscommerce's includes\modules\payment directory
+
+3. Go to your oscommerce's admin area, Module -> Payment. You should see the new payment module is installed. Click on the module and edit the module's configuration according to yours.
+
+
+
+The info that you need to update in file are this, 
+\catalog\includes\modules\payment
+Test Mode Webcash gateway url is https://staging.webcash.com.my/wcgatewayinit.php (webcash.php Line 32).
+Change your return url webcash.php Line 151.
+
+
+
+
+* Additional Task
+- You need to add a new currency in the Currencies page in admin control panel
+
+Step:
+1) Login to Admin page
+2) Click on Localization
+3) Click on Currencies
+4) New Currency if you don't have the Ringgit Malaysia in your system
+    - The currency detail as below
+       - Title: Ringgit Malaysia
+       _ Code: MYR
+       _ Symbol Left: RM
+       _ Symbol Right:
+       _ Decimal Point: .
+       _ Thousands Point: ,
+       _ Decimal Places: 2
+       _ Value: [The currency rate as you wish to convert from USD to MYR]
